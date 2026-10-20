@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>Projeto Manager</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/eventos.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+<header class='top'>
+  <div class='logo'><img alt='Projeto Manager' src='https://lh3.googleusercontent.com/d/1lD4LkYf1dxDuDpFnL-sJGUSVbtJ-TRM1'/></div>
+  <span class='ttl'></span>
+  <button class='sec' id='b-inicio' style='display:none'>☰ Menu inicial</button>
+  <small id='quem'></small>
+  <button class='lnk' id='sair' style='display:none'>Sair</button>
+</header>
+
+<main>
+  <!-- LOGIN -->
+  <section class='tela on' id='t-auth'>
+    <div class='card center'>
+      <div class='logo g'><img alt='Projeto Manager' src='https://lh3.googleusercontent.com/d/1lD4LkYf1dxDuDpFnL-sJGUSVbtJ-TRM1'/></div>
+      <h2>Entrar</h2>
+      <div id='p1'>
+        <p>Informe seu e-mail. Enviaremos um código de 6 dígitos para você confirmar.</p>
+        <input autocomplete='email' id='email' placeholder='seu@email.com' type='email'/>
+        <button class='full' id='b-env'>Enviar código</button>
+      </div>
+      <div id='p2' style='display:none'>
+        <p>Digite o código enviado para <b id='emx'></b></p>
+        <input autocomplete='one-time-code' class='cod' id='cod' inputmode='numeric' maxlength='6' placeholder='000000' type='text'/>
+        <button class='full' id='b-val'>Validar</button>
+        <button class='lnk' id='b-volta'>Usar outro e-mail / reenviar</button>
+      </div>
+      <div class='msg' id='m-auth'></div>
+    </div>
+  </section>
+
+  <!-- MENU INICIAL -->
+  <section class='tela' id='t-inicio'>
+    <div class='inicio'>
+      <div class='logo g'><img alt='Projeto Manager' src='https://lh3.googleusercontent.com/d/1lD4LkYf1dxDuDpFnL-sJGUSVbtJ-TRM1'/></div>
+      <nav class='inicio-menu'>
+        <button class='sel' id='i-novo' type='button'>Novo jogo</button>
+        <button id='i-carregar' type='button'>Carregar</button>
+        <button id='i-sair' type='button'>Sair</button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class='tela' id='t-menu'>
+    <div class='card center wide'>
+      <div class='logo g'><img alt='Projeto Manager' src='https://lh3.googleusercontent.com/d/1lD4LkYf1dxDuDpFnL-sJGUSVbtJ-TRM1'/></div>
+      <h2>Suas carreiras</h2>
+      <div class='slots' id='slots'></div>
+      <div class='msg' id='m-menu'></div>
+      <button class='sec' id='b-menu-inicio' type='button' style='margin-top:14px'>← Menu inicial</button>
+    </div>
+  </section>
+
+  <!-- ESCOLHA DA LIGA E DO CLUBE -->
+  <section class='tela' id='t-esc'>
+    <div class='card'>
+      <h2>Nova carreira</h2>
+      <label>Nome do treinador</label>
+      <input id='tec' maxlength='30' placeholder='Ex.: Carlos Almeida' type='text'/>
+    </div>
+    <div class='card' id='box-ligas'>
+      <div class='picker-head'><h2>1. Escolha sua liga</h2></div>
+      <p style='color:var(--mut);margin-top:0'>Selecione o campeonato nacional em que sua carreira será disputada.</p>
+      <div class='league-grid' id='ligas'></div>
+    </div>
+    <div class='card' id='box-clubes' style='display:none'>
+      <div class='picker-head'>
+        <h2 id='titulo-clubes'>2. Escolha seu clube</h2>
+        <button class='sec pick-back' id='b-voltaligas' type='button'>&#8592; Trocar liga</button>
+      </div>
+      <p id='subtitulo-liga' style='color:var(--mut);margin-top:0'></p>
+      <div id='link-logo-liga' style='margin:-6px 0 14px'></div>
+      <div class='grid' id='clubes'></div>
+    </div>
+    <div class='card' id='det' style='display:none'></div>
+    <div class='msg' id='m-esc'></div>
+    <button class='sec' id='b-voltamenu'>Voltar ao menu</button>
+  </section>
+
+  <!-- JOGO -->
+  <section class='tela' id='t-jogo'><div id='dash'></div></section>
+</main>
+
+<div id='toast'></div>
+<div id='anim'></div>
+<div id='partida'></div>
+<div id='modal'><div id='mbox'></div></div>
+</body>
+</html>
