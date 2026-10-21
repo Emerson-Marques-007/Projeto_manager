@@ -1,0 +1,52 @@
+{
+  "seasons": [
+    { "id": "2026", "name": "2026/27", "startsOn": "2026-08-01", "endsOn": "2027-06-30" }
+  ],
+  "memberships": [
+    {
+      "playerId": "123",
+      "clubId": "456",
+      "seasonId": "2026",
+      "position": "ATA",
+      "overall": 78,
+      "potential": 82,
+      "marketValue": 12000000,
+      "isCurrent": true
+    }
+  ],
+  "contracts": [
+    {
+      "playerId": "123",
+      "clubId": "456",
+      "seasonId": "2026",
+      "salary": 1800000,
+      "releaseClause": 40000000,
+      "startsOn": "2026-07-01",
+      "endsOn": "2029-06-30"
+    }
+  ],
+  "clubCompetitions": [
+    {
+      "clubId": "456",
+      "competitionId": "789",
+      "seasonId": "2026",
+      "finalPosition": 3,
+      "points": 68,
+      "played": 38,
+      "wins": 20,
+      "draws": 8,
+      "losses": 10
+    }
+  ],
+  "clubFinances": [
+    {
+      "clubId": "456",
+      "seasonId": "2026",
+      "transferBudget": 50000000,
+      "wageBudget": 30000000,
+      "annualRevenue": 120000000,
+      "operatingCosts": 70000000,
+      "debt": 10000000
+    }
+  ]
+}

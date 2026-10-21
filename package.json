@@ -1,0 +1,17 @@
+{
+  "name": "projeto-manager",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "check": "node --check api/health.js",
+    "seed:soccerwiki": "node scripts/seed-soccerwiki.mjs"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "latest"
+  },
+  "devDependencies": {
+    "vercel": "latest"
+  }
+}
